@@ -12,6 +12,7 @@ body {
 	background-size: 100%;
 	font-family: "Red Hat Display", sans-serif;
 	color: grey;
+	background-color: rgb(232, 237, 250);
 }
 
 .card-container {
@@ -21,32 +22,34 @@ body {
 	justify-content: center;
 }
 .card {
-	height: 75%;
 	width: 450px;
 	background-color: white;
 	border-radius: 15px;
 	box-shadow: -3px 4px 6px 3px;
 	overflow: hidden;
 }
+.illustration img {
+	width: 100%;
+}
 .content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 50px;
+	gap: 25px;
+	padding: 50px;
+	text-align: center;
 }
 .content h2 {
 	color: black;
-	margin: 40px 0 15px 0;
-	font-size: 1.9rem;
+	font-size: 1.65rem;
 	font-weight: 900;
 }
 .content p {
-	margin-bottom: 1rem;
 	text-align: center;
 	line-height: 25px;
 }
-.content a {
-	margin: 0 20px;
+
+.plan-info a {
 	font-weight: 900;
 	cursor: pointer;
 }
@@ -56,16 +59,16 @@ body {
 .plan-info {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	padding: 25px;
 	width: 100%;
 	background-color: hsl(225, 100%, 98%);
 	border-radius: 5px;
-	margin-bottom: 2rem;
-}
-.plan-info img {
-	margin: 20px 20px;
 }
 .amount {
 	flex: 2;
+	margin-left: 20px;
+	text-align: left;
 }
 .amount span {
 	display: block;
@@ -73,6 +76,7 @@ body {
 .amount span:nth-child(1) {
 	color: black;
 	font-weight: 900;
+	margin-bottom: 5px;
 }
 
 .proceed {
@@ -84,7 +88,6 @@ body {
 	border-radius: 10px;
 	font-weight: 900;
 	font-family: "Red Hat Display", sans-serif;
-	margin-bottom: 1.5rem;
 }
 .proceed:hover {
 	opacity: 0.7;
@@ -93,7 +96,6 @@ body {
 .cancel {
 	background-color: white;
 	color: grey;
-	height: 3.2rem;
 	border: none;
 	font-weight: 900;
 	font-family: "Red Hat Display", sans-serif;
@@ -101,4 +103,25 @@ body {
 }
 .cancel:hover {
 	color: black;
+}
+
+@media screen and (max-width: 600px), (max-height: 710px) {
+	body {
+		background-color: rgb(214, 225, 255);
+	}
+	.card {
+		width: 325px;
+		height: 565px;
+	}
+	.content {
+		padding: 30px 25px;
+		gap: 20px;
+	}
+	.content h2 {
+		font-size: 1.4rem;
+	}
+	.plan-info {
+		padding: 15px;
+		font-size: 0.85rem;
+	}
 }
